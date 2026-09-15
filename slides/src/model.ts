@@ -731,7 +731,7 @@ export const FONT_STACK =
   "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
 
 export const MONOSPACE_FONT_STACK =
-  "ui-monospace, 'SFMono-Regular', 'Berkeley Mono', 'Menlo', 'Consolas', monospace"
+  "ui-monospace, 'SFMono-Regular', 'Google Sans Code', 'Berkeley Mono', 'Menlo', 'Consolas', monospace"
 
 /**
  * An element's effective morph key: the `morphId` override when set, else its
