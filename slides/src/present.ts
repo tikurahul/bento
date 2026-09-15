@@ -31,7 +31,7 @@ const TYPE_WRITER_DURATION_DEFAULT = 0.08
 /** Seconds per typed character, per-deck by doc.present.typeWriterSeconds. */
 let TYPE_WRITER_DURATION = TYPE_WRITER_DURATION_DEFAULT
 /** No typewriter run lasts longer than this; a long snippet types faster. */
-const TYPE_WRITER_MAX_TOTAL = 6
+const TYPE_WRITER_MAX_TOTAL = 2
 
 export interface PresentSession {
   exit(): void
@@ -86,7 +86,7 @@ export function startPresentation(
   } = {},
 ): PresentSession {
   MORPH_DURATION = Math.min(6, Math.max(0.1, doc.present?.morphSeconds ?? MORPH_DURATION_DEFAULT))
-  TYPE_WRITER_DURATION = Math.min(1, Math.max(0.08, doc.present?.typeWriterSeconds ?? TYPE_WRITER_DURATION_DEFAULT))
+  TYPE_WRITER_DURATION = Math.min(1, Math.max(0.01, doc.present?.typeWriterSeconds ?? TYPE_WRITER_DURATION_DEFAULT))
 
   const overlay = document.createElement('div')
   overlay.className = 'bento-present-overlay'
